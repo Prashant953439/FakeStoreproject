@@ -4,6 +4,8 @@ import dev.prashant.productservicemorning.dtos.CreateProductRequestDto;
 import dev.prashant.productservicemorning.models.Category;
 import dev.prashant.productservicemorning.models.Product;
 import dev.prashant.productservicemorning.services.ProductService;
+import dev.prashant.productservicemorning.services.SelfProductService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -13,7 +15,7 @@ import java.util.List;
 public class ProductController {
     private ProductService productService;
 
-    public ProductController(ProductService productService){
+    public ProductController(@Qualifier ("SelfProductService") ProductService productService){
         this.productService = productService;
     }
     @PostMapping("/products")

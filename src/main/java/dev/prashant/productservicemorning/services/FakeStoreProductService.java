@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.*;
 
-@Service
+@Service("FakeStoreProductService")
 public class FakeStoreProductService implements ProductService {
     private RestTemplate restTemplate;
     public FakeStoreProductService(RestTemplate restTemplate) {

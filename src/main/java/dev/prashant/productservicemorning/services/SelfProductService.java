@@ -22,7 +22,7 @@ public class SelfProductService implements ProductService{
     @Override
     public Product getSingleProduct(Long productId) {
 
-        return productRepository.findByIdIs(productId);
+        return productRepository.findByIdIs(productId)  ;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class SelfProductService implements ProductService{
         product.setCategory(categoryFromDatabase);
 
         Product savedProduct = productRepository.save(product);
-        return  savedProduct;
+        return  savedProduct;  
 
     }
 
